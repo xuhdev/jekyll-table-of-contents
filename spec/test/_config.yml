@@ -1,0 +1,5 @@
+source: source
+plugins: ../../plugins
+
+table_of_contents:
+    dirs: [a, b]
