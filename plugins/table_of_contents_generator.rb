@@ -38,6 +38,8 @@ module Jekyll
           end
         end
 
+        toc_data.sort!{ |a, b| a['table_of_contents']['url'] <=> b['table_of_contents']['url'] }
+
         site.pages << TableOfContentPage.new(site, site.source, dir, toc_data)
       end
     end
