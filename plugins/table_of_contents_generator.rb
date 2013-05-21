@@ -23,7 +23,7 @@ module Jekyll
 
       toc_config = site.config['table_of_contents']
 
-      unless toc_config.has_key? 'dirs'
+      if toc_config == nil or !toc_config.has_key?('dirs')
         return
       end
 
