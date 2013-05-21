@@ -1,6 +1,13 @@
 require 'fileutils'
 
 describe 'Jekyll Table of Contents' do
+  describe '#Empty _config.yml' do
+    it 'Should produce no error' do
+      test_dir = File.expand_path('../test0', __FILE__)
+      system("cd #{test_dir} && jekyll build").should == true
+    end
+  end
+
   describe '#Run test' do
     it 'Should produce the table of contents' do
       test_dir = File.expand_path('../test', __FILE__)
